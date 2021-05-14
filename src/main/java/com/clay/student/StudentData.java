@@ -12,7 +12,7 @@ public class StudentData {
     }
     public void printdata(){
 
-        System.out.println(name+"\t"+english+"\t"+math+"\t"+average());
+        System.out.print(name+"\t"+english+"\t"+math+"\t"+average());
     }
     public float average(){
         float average = (english+math)/2;
@@ -23,4 +23,5 @@ public class StudentData {
 
         return (math>english) ?  math:english;
     }
+
 }
