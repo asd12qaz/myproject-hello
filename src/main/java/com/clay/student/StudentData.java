@@ -19,4 +19,8 @@ public class StudentData {
 
         return average;
     }
+    public int bigvalue(){
+
+        return (math>english) ?  math:english;
+    }
 }
