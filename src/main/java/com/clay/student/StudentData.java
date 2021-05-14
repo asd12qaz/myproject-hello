@@ -4,6 +4,7 @@ public class StudentData {
     String name;
     int english;
     int math;
+    int average;
 
     public StudentData(String name, int english, int math) {
         this.name = name;
@@ -12,10 +13,30 @@ public class StudentData {
     }
     public void printdata(){
 
-        System.out.print(name+"\t"+english+"\t"+math+"\t"+average());
+            char grading;
+
+            switch (average()/10) {
+                case 9:
+                    grading ='A';
+                    break;
+             case 8:
+                    grading ='B';
+                    break;
+             case 7:
+                    grading ='C';
+                    break;
+             case 6:
+                    grading='D';
+                    break;
+             default:
+                    grading='F';
+                    break;
+        }
+        System.out.println(name+"\t"+english+"\t"+math+"\t"+average()+"\t"
+                +((average>60)? "pass":"failed")+"\tgrading="+grading);
     }
-    public float average(){
-        float average = (english+math)/2;
+    public int average(){
+         average = (english+math)/2;
 
         return average;
     }

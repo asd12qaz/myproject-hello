@@ -6,9 +6,12 @@ public class Student {
     public static void main(String[] args) {
 
 //        outfun();//ctrl+alt+m 快速將程式打包放置外面
-        StudentData sd =new StudentData("clay",70,90);
+        StudentData sd =new StudentData("clay",99,90);
         sd.printdata();
+
         System.out.println("big value:"+sd.bigvalue());
+
+
 
 //        String test="qplslmvax"; //字串處理
 //        System.out.println(test.substring(1));
