@@ -4,6 +4,8 @@ public class Person {
        float weigh;
        float height;
        public  Person(float weigh,float height){
+              this.weigh=weigh;
+              this.height=height;
 
        }
        public float BMI(){
