@@ -12,7 +12,7 @@ public class GameFor {
         int rsnumber=0;
         Scanner scanner=new Scanner(System.in);
         for(number=5;number>0;number--){
-            System.out.print("Please enter 第"+number+"number:");
+            System.out.print("Please enter 第"+number+"次number:");
             rsnumber=scanner.nextInt();
             if(rsnumber>cknumber){
                 System.out.println("number is too big");
@@ -29,3 +29,6 @@ public class GameFor {
 
     }
 }
+
+//File / Setting / Build, Execution, Deployment / Build Tools / Gradle
+//將 Build and run using 和 Run tests using 都改成 IntelliJ IDEA--解決中文編碼問題
