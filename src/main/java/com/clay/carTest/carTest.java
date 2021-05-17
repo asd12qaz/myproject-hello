@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
+//停車場練習 carclass為相關類別(汽車)
+
 public class carTest {
     public static void main(String[] args) {
         Random random = new Random();
