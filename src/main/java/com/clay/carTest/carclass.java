@@ -7,12 +7,12 @@ import java.time.format.DateTimeFormatter;
 public class carclass {
     LocalDateTime Localnow;
     LocalDateTime Localleave;
-    private int ID;
+ String ID;
     private int time;
     private int costtime;
     private int cost;
 
-    public carclass(int ID, LocalDateTime localnow) {
+    public carclass(String ID, LocalDateTime localnow) {
         this.ID = ID;
         this.Localnow = localnow;
     }
@@ -22,7 +22,7 @@ public class carclass {
             this.Localleave = localleave;
             this.time();
             this.cost();
-            this.print();
+//            this.print();
         } else {
             System.out.println("系統錯誤 請聯繫管理員 造成不便請見諒");
         }
@@ -43,7 +43,7 @@ public class carclass {
 
     }
 
-    private void print() {
+    public void print() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         System.out.println("車牌:" + this.ID + "\t停車時間共:" + this.time + "分鐘");
         System.out.println("進場時間:" + formatter.format(this.Localnow));
