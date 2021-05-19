@@ -6,10 +6,14 @@ public class Student {
     public static void main(String[] args) {
 
 //        outfun();//ctrl+alt+m 快速將程式打包放置外面
-        StudentData sd =new StudentData("clay",99,90);
+        StudentData.pass=70;
+        GrantuateStuentDate.pass=60;
+        StudentData sd =new StudentData("clay",50,90);
         sd.printdata();
-
         System.out.println("big value:"+sd.bigvalue());
+        GrantuateStuentDate gstudent=new GrantuateStuentDate("green",60,70,82);
+        gstudent.printdata();
+
 
 
 

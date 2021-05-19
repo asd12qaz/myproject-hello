@@ -4,23 +4,51 @@ import java.util.*
 
 fun main() {
 //    outfun()//ctrl+alt+m 快速將程式外包
-
+    studentdata11.pass=60
+    grantuateStudentdatall.pass=70
     val sd = studentdata11("clay", 59, 92)
     sd.print()
     sd.standardKotlin()
     println("bigvalue: ${sd.bigvalue()}")
+    val gsd=grantuateStudentdatall("blue",80,90,85)
+    gsd.print()
+    gsd.standardKotlin()
 //    var test:String?="qldkvmnir" //null用法測試
 //    test=null
 //    println(test?.substring(1))
 }
+class grantuateStudentdatall( name: String, english: Int, math: Int,val thesis:Int):studentdata11(name, english, math){
+    companion object{
+        var pass:Int=50
+    }
 
-class studentdata11(val name:String,val english:Int,val math:Int){
+    override fun print() {
+        print("$name\t$english\t$math\t${average()}\tgrading:${grading()}")//數值裡使用$可以放入變數，${}可以放入方法
+
+    }
+
+    override fun average(): Int {
+        average =(english+math+thesis)/3
+        return average;
+    }
+
+    override fun standardKotlin() {
+        if(average> pass)
+            println("\tpass")
+        else
+            println("\tfailed")
+    }
+}
+
+open class studentdata11(val name:String,val english:Int,val math:Int){
+    companion object{
+        var pass:Int=60
+    }
     var average: Int=0 ;
-
-    fun print(){
+    open fun print(){
         print("$name\t$english\t$math\t${average()}\tgrading:${grading()}")//數值裡使用$可以放入變數，${}可以放入方法
     }
-    fun average():Int{
+    open fun average():Int{
          average =(english+math)/2
         return average;
     }
@@ -35,8 +63,9 @@ class studentdata11(val name:String,val english:Int,val math:Int){
             else       ->'F'
     }
 
-    fun standardKotlin(){
-        if(average>60)
+    open fun standardKotlin(){
+
+        if(average>pass)
             println("\tpass")
         else
             println("\tfailed")

@@ -5,6 +5,7 @@ public class StudentData {
     int english;
     int math;
     int average;
+    static int pass=60;
 
     public StudentData(String name, int english, int math) {
         this.name = name;
@@ -33,7 +34,7 @@ public class StudentData {
                     break;
         }
         System.out.println(name+"\t"+english+"\t"+math+"\t"+average()+"\t"
-                +((average>60)? "pass":"failed")+"\tgrading="+grading);
+                +((average>=pass)? "pass":"failed")+"\tgrading="+grading);
     }
     public int average(){
          average = (english+math)/2;
