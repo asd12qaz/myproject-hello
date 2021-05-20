@@ -5,6 +5,18 @@ import java.io.*;
 public class Tester {
     public static void main(String[] args) {
         int n;
+        try {
+            BufferedReader bufferedReader=new BufferedReader(new FileReader("qaz"));
+            String nstring=bufferedReader.readLine();
+            while (nstring!=null){
+                System.out.println(nstring);
+                nstring=bufferedReader.readLine();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 //        fileInputstream();
 //        fileReader();
 

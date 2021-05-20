@@ -1,8 +1,5 @@
-package com.clay.Thrand
+package com.clay.Thread
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import kotlin.concurrent.thread
 
 fun main() {
